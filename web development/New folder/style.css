@@ -105,19 +105,19 @@
      opacity : 0;
     }
  }
-@media all and (max-width:600px){
+@media all and (max-width:400px){
     .bgimg{
-        width:600px;
-        height:600px;
+        width:400px;
+        height:800px;
     }
     .text{
         position:absolute;
-        left:10rem;
+        left:6rem;
         top:30rem;
     }
     .five{
         position:absolute;
-        left:29rem;
+        left:25rem;
 
     }
 } 
