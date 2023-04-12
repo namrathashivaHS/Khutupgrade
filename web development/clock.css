@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#out{
+    width:20rem;
+    height:20rem;
+    background:rgb(113, 199, 227);
+    border-radius: 50%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+#in{
+    width:2rem;
+    height:2rem;
+    background:rgb(28, 6, 133);
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+}
+#n1{
+    width:0.35rem;
+    height:9rem;
+    background:white;
+    border-radius: 5px;
+    position:absolute;
+    left:9.825rem;
+    top:0.5rem;
+    animation: minutehand 6s infinite;
+    transform-origin:bottom center;
+    animation-timing-function: linear;
+}
+@keyframes minutehand {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}  }
+
+#n2{
+    width:0.5rem;
+    height:8rem;
+    background: yellow;
+    border-radius: 5px;
+    position:absolute;
+    left:9.75rem;
+    top:1.5rem;
+    animation: hourhand 60s infinite;
+    transform-origin:bottom center;
+    animation-timing-function: linear;
+}
+@keyframes hourhand {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}  }

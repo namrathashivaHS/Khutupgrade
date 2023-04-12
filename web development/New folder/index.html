@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ Love ❤️</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+         background-color : #ffceed;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgimg">
+        <img class="mypic"src="./SLN_2096.JPG" alt="DuDu"/>
+        <h1 class="text">Happy Anniversary DUDU</h1>
+        <h1 class="five">5</h1>
+    </div>
+    <div class="heart"></div>
+</body>
+<script>
+    var brd = document.createElement("DIV");
+document.body.insertBefore(brd, document.getElementById("board"));
+const duration = 3000;
+const speed = 0.5;
+const cursorXOffset = 0;
+const cursorYOffset = -5;
+var hearts = [];
+function generateHeart(x, y, xBound, xStart, scale)
+{
+   var heart = document.createElement("DIV");
+   heart.setAttribute('class', 'heart');
+   brd.appendChild(heart);
+   heart.time = duration;
+   heart.x = x;
+   heart.y = y;
+   heart.bound = xBound;
+   heart.direction = xStart;
+   heart.style.left = heart.x + "px";
+   heart.style.top = heart.y + "px";
+   heart.scale = scale;
+   heart.style.transform = "scale(" + scale + "," + scale + ")";
+   if(hearts == null)
+    hearts = [];
+   hearts.push(heart);
+   return heart;
+}
+var before = Date.now();
+var id = setInterval(frame, 5);
+function frame()
+{
+   var current = Date.now();
+   var deltaTime = current - before;
+   before = current;
+   for(i in hearts)
+   {
+    var heart = hearts[i];
+    heart.time -= deltaTime;
+    if(heart.time > 0)
+    {
+     heart.y -= speed;
+     heart.style.top = heart.y + "px";
+     heart.style.left = heart.x + heart.direction * heart.bound * Math.sin(heart.y * heart.scale / 30) + "px";
+    }
+    else
+    {
+     heart.parentNode.removeChild(heart);
+     hearts.splice(i, 1);
+    }
+   }
+}
+// var down = false;
+// var event  = null;
+// document.onmousedown = function(e) {
+//    down = true;
+//    event = e;
+// }
+// document.onmouseup = function(e) {
+//    down = false;
+// }
+// document.onmousemove = function(e) {
+//    event = e;
+// }
+// document.ontouchstart = function(e) {
+//    down = true;
+//    event = e.touches[0];
+// }
+// document.ontouchend = function(e) {
+//    down = false;
+// }
+// var gr = setInterval(check, 100);
+// function check()
+// {
+//    if(down)
+//    {
+//     var start = 1 - Math.round(Math.random()) * 2;
+//     var scale = Math.random() * Math.random() * 0.8 + 0.2;
+//     var bound = 30 + Math.random() * 20;
+//     generateHeart(event.pageX - brd.offsetLeft + cursorXOffset, event.pageY - brd.offsetTop + cursorYOffset, bound, start, scale);
+//    }
+// }
+
+generateHeart(0, -100, null, null, 1);
+
+generateHeart(0, 0, null, null, 1);
+generateHeart(0, 100, null, null, 1);
+generateHeart(0, 200, null, null, 1);
+generateHeart(0, 300, null, null, 1);
+generateHeart(0, 400, null, null, 1);
+generateHeart(0, 500, null, null, 1);
+generateHeart(0, 600, null, null, 1);
+generateHeart(0, 700, null, null, 1);
+generateHeart(0, 800, null, null, 1);
+generateHeart(0, 900, null, null, 1);
+generateHeart(0, 1000, null, null, 1);
+generateHeart(0, 1100, null, null, 1);
+generateHeart(0, 1200, null, null, 1);
+
+generateHeart(50, 50, null, null, 1);
+generateHeart(50, 150, null, null, 1);
+generateHeart(50, 250, null, null, 1);
+generateHeart(50, 350, null, null, 1);
+generateHeart(50, 450, null, null, 1);
+generateHeart(50, 550, null, null, 1);
+generateHeart(50, 650, null, null, 1);
+generateHeart(50, 750, null, null, 1);
+generateHeart(50, 850, null, null, 1);
+generateHeart(50, 950, null, null, 1);
+generateHeart(50, 1050, null, null, 1);
+generateHeart(50, 1150, null, null, 1);
+
+generateHeart(100, 100, null, null, 1);
+generateHeart(100, 200, null, null, 1);
+generateHeart(100, 300, null, null, 1);
+generateHeart(100, 400, null, null, 1);
+generateHeart(100, 500, null, null, 1);
+generateHeart(100, 600, null, null, 1);
+generateHeart(100, 700, null, null, 1);
+generateHeart(100, 800, null, null, 1);
+generateHeart(100, 900, null, null, 1);
+generateHeart(100, 1000, null, null, 1);
+generateHeart(100, 1100, null, null, 1);
+generateHeart(100, 1200, null, null, 1);
+
+
+generateHeart(150, 150, null, null, 1);
+generateHeart(150, 250, null, null, 1);
+generateHeart(150, 350, null, null, 1);
+generateHeart(150, 450, null, null, 1);
+generateHeart(150, 550, null, null, 1);
+generateHeart(150, 650, null, null, 1);
+generateHeart(150, 750, null, null, 1);
+generateHeart(150, 850, null, null, 1);
+generateHeart(150, 950, null, null, 1);
+generateHeart(150, 1050, null, null, 1);
+generateHeart(150, 1150, null, null, 1);
+
+generateHeart(200, 200, null, null, 1);
+generateHeart(200, 300, null, null, 1);
+generateHeart(200, 400, null, null, 1);
+generateHeart(200, 500, null, null, 1);
+generateHeart(200, 600, null, null, 1);
+generateHeart(200, 700, null, null, 1);
+generateHeart(200, 800, null, null, 1);
+generateHeart(200, 900, null, null, 1);
+generateHeart(200, 1000, null, null, 1);
+generateHeart(200, 1100, null, null, 1);
+generateHeart(200, 1200, null, null, 1);
+
+generateHeart(250, 250, null, null, 1);
+generateHeart(250, 350, null, null, 1);
+generateHeart(250, 450, null, null, 1);
+generateHeart(250, 550, null, null, 1);
+generateHeart(250, 650, null, null, 1);
+generateHeart(250, 750, null, null, 1);
+generateHeart(250, 850, null, null, 1);
+generateHeart(250, 950, null, null, 1);
+generateHeart(250, 1050, null, null, 1);
+generateHeart(250, 1150, null, null, 1);
+
+generateHeart(300, 300, null, null, 1);
+generateHeart(300, 400, null, null, 1);
+generateHeart(300, 500, null, null, 1);
+generateHeart(300, 600, null, null, 1);
+generateHeart(300, 700, null, null, 1);
+generateHeart(300, 800, null, null, 1);
+generateHeart(300, 900, null, null, 1);
+generateHeart(300, 1000, null, null, 1);
+generateHeart(300, 1100, null, null, 1);
+generateHeart(300, 1200, null, null, 1);
+
+generateHeart(350, 350, null, null, 1);
+generateHeart(350, 450, null, null, 1);
+generateHeart(350, 550, null, null, 1);
+generateHeart(350, 650, null, null, 1);
+generateHeart(350, 750, null, null, 1);
+generateHeart(350, 850, null, null, 1);
+generateHeart(350, 950, null, null, 1);
+generateHeart(350, 1050, null, null, 1);
+generateHeart(350, 1150, null, null, 1);
+
+generateHeart(400, 400, null, null, 1);
+generateHeart(400, 500, null, null, 1);
+generateHeart(400, 600, null, null, 1);
+generateHeart(400, 700, null, null, 1);
+generateHeart(400, 800, null, null, 1);
+generateHeart(400, 900, null, null, 1);
+generateHeart(400, 1000, null, null, 1);
+generateHeart(400, 1100, null, null, 1);
+generateHeart(400, 1200, null, null, 1);
+
+generateHeart(450, 450, null, null, 1);
+generateHeart(450, 550, null, null, 1);
+generateHeart(450, 650, null, null, 1);
+generateHeart(450, 750, null, null, 1);
+generateHeart(450, 850, null, null, 1);
+generateHeart(450, 950, null, null, 1);
+generateHeart(450, 1050, null, null, 1);
+generateHeart(450, 1150, null, null, 1);
+
+generateHeart(500, 500, null, null, 1);
+generateHeart(500, 600, null, null, 1);
+generateHeart(500, 700, null, null, 1);
+generateHeart(500, 800, null, null, 1);
+generateHeart(500, 900, null, null, 1);
+generateHeart(500, 1000, null, null, 1);
+generateHeart(500, 1100, null, null, 1);
+generateHeart(500, 1200, null, null, 1);
+
+generateHeart(550, 550, null, null, 1);
+generateHeart(550, 650, null, null, 1);
+generateHeart(550, 750, null, null, 1);
+generateHeart(550, 850, null, null, 1);
+generateHeart(550, 950, null, null, 1);
+generateHeart(550, 1050, null, null, 1);
+generateHeart(550, 1150, null, null, 1);
+
+generateHeart(600, 600, null, null, 1);
+generateHeart(600, 700, null, null, 1);
+generateHeart(600, 800, null, null, 1);
+generateHeart(600, 900, null, null, 1);
+generateHeart(600, 1000, null, null, 1);
+generateHeart(600, 1100, null, null, 1);
+generateHeart(600, 1200, null, null, 1);
+
+generateHeart(650, 650, null, null, 1);
+generateHeart(650, 750, null, null, 1);
+generateHeart(650, 850, null, null, 1);
+generateHeart(650, 950, null, null, 1);
+generateHeart(650, 1050, null, null, 1);
+generateHeart(650, 1150, null, null, 1);
+
+generateHeart(700, 700, null, null, 1);
+generateHeart(700, 800, null, null, 1);
+generateHeart(700, 900, null, null, 1);
+generateHeart(700, 1000, null, null, 1);
+generateHeart(700, 1100, null, null, 1);
+generateHeart(700, 1200, null, null, 1);
+
+generateHeart(750, 750, null, null, 1);
+generateHeart(750, 850, null, null, 1);
+generateHeart(750, 950, null, null, 1);
+generateHeart(750, 1050, null, null, 1);
+generateHeart(750, 1150, null, null, 1);
+
+generateHeart(800, 800, null, null, 1);
+generateHeart(800, 900, null, null, 1);
+generateHeart(800, 1000, null, null, 1);
+generateHeart(800, 1100, null, null, 1);
+generateHeart(800, 1200, null, null, 1);
+
+generateHeart(850, 850, null, null, 1);
+generateHeart(850, 950, null, null, 1);
+generateHeart(850, 1050, null, null, 1);
+generateHeart(850, 1150, null, null, 1);
+
+generateHeart(900, 900, null, null, 1);
+generateHeart(900, 1000, null, null, 1);
+generateHeart(900, 1100, null, null, 1);
+generateHeart(900, 1200, null, null, 1);
+
+generateHeart(950, 950, null, null, 1);
+generateHeart(950, 1050, null, null, 1);
+generateHeart(950, 1150, null, null, 1);
+
+generateHeart(1000, 1000, null, null, 1);
+generateHeart(1000, 1100, null, null, 1);
+generateHeart(1000, 1200, null, null, 1);
+
+generateHeart(1050, 1050, null, null, 1);
+generateHeart(1050, 1150, null, null, 1);
+
+generateHeart(1100, 1100, null, null, 1);
+generateHeart(1100, 1200, null, null, 1);
+
+generateHeart(1050, 1150, null, null, 1);
+
+generateHeart(1200, 1200, null, null, 1);
+
+ </script>
+</html>

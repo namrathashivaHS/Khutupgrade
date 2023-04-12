@@ -1,0 +1,123 @@
+:root{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bgimg{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-image: url(./istockphoto-174655938-170667a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+.mypic {
+    height:450px;
+    width:310px;
+    transform: rotate(-20deg);
+    border:1px solid rgb(235, 82, 82);
+    box-shadow: 20px 20px 5px 35px rgba(250, 4, 4, 0.6),
+    -20px -20px 5px 35px rgba(250, 4, 4,0.6);
+    border-radius: 50%;
+    animation:img 2s 0s forwards ;
+}
+
+.text{
+    color:rgba(174, 209, 49, 1);
+    transform: rotate(-11deg);
+    position:absolute;
+    top:28rem;
+    left:33rem;
+    animation: text 3s ease-in-out ;
+}
+.five{
+    position:absolute;
+    left:60rem;
+    top:1rem; 
+    font-size: 230px;
+    color:rgba(255, 217, 0, 0.9);
+    animation: five 2s ease 3s infinite normal;
+    opacity: 0.0;
+}
+@keyframes img {
+    from{
+        top:-200px;
+        opacity:0.0;
+    }
+    to{
+        top:0.0;
+        opacity:1.0;
+    }
+}
+@keyframes text {
+    from{
+        top:560px;
+
+    }
+    to{
+        top:480px;
+    }
+    
+}
+@keyframes five {
+    from{
+        transform: rotatey(0deg);
+        opacity:0.1;
+    }
+    to{
+        transform: rotatey(360deg);
+        opacity:1.0;
+    }
+}
+
+.heart {
+    z-index : 999;
+    animation : heartfade 6s linear;
+    position : absolute;
+ }
+ .heart:before,
+ .heart:after {
+    content : "";
+    background-color : #fa0e2d;
+    position : absolute;
+    height : 30px;
+    width : 45px;
+    border-radius : 15px 0px 0px 15px;
+ }
+ .heart:before {
+    transform : rotate(45deg);
+ }
+ .heart:after {
+    left : 10.5px;
+    transform : rotate(135deg);
+ }
+
+ @keyframes heartfade {
+    0% {
+     opacity : 1;
+    }
+    50% {
+     opacity : 0;
+    }
+ }
+@media all and (max-width:600px){
+    .bgimg{
+        width:600px;
+        height:600px;
+    }
+    .text{
+        position:absolute;
+        left:10rem;
+        top:30rem;
+    }
+    .five{
+        position:absolute;
+        left:29rem;
+
+    }
+} 
